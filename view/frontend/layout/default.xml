@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Created by PhpStorm.
+ * User: mahdynasr
+ * Date: 03/04/18
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="MahdyNasr_Newsletter::js/mahdynasr_newsletter.js"/>
+    </head>
+
+    <body>
+        <referenceBlock name="head.components">
+            <block class="Magento\Framework\View\Element\Js\Components" name="newsletter_head_components" template="Magento_Newsletter::js/components.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="page.bottom">
+            <block class="MahdyNasr\Newsletter\Block\Subscribe" name="mahdy.subscribe" as="subscribe" before="-" template="MahdyNasr_Newsletter::subscribe.phtml"/>
+        </referenceBlock>
+    </body>
+</page>
