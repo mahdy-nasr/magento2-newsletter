@@ -6,7 +6,12 @@
 //----------------------------
 
 & when (@media-common = true) {
-
+    .lib-font-face(
+        @family-name: 'icons-blank-theme',
+        @font-path: "@{baseDir}fonts/Blank-Theme-Icons/Blank-Theme-Icons",
+        @font-weight: normal,
+        @font-style: normal
+    );
     //  Newsletter subscription
     .block.mahdy-newsletter {
         margin-bottom: 20px;
@@ -41,10 +46,11 @@
 
                 .lib-icon-font(
                         @icon-envelope,
-                    @_icon-font-size: 16px,
+                    @_icon-font:'icons-blank-theme',
+                    @_icon-font-size: 34px,
                     @_icon-font-line-height: 32px,
                     @_icon-font-color: @form-element-input-placeholder__color,
-                    @_icon-font-margin: 0 0 0 8px
+                    @_icon-font-margin: 0 0 0 0px
                 );
 
                 display: block;
@@ -52,11 +58,12 @@
             }
             .control-name {
                 .lib-icon-font(
-                        @icon-edit,
-                    @_icon-font-size: 16px,
+                        @icon-account,
+                    @_icon-font:'icons-blank-theme',
+                    @_icon-font-size: 24px,
                     @_icon-font-line-height: 32px,
                     @_icon-font-color: @form-element-input-placeholder__color,
-                    @_icon-font-margin: 0 0 0 8px
+                    @_icon-font-margin: 0 0 0 4px
                 );
                 display: block;
             }
